@@ -7,11 +7,11 @@ module SchemaDotOrg
   class ItemList < Thing
     attr_accessor :itemListOrder,
                   :numberOfItems,
-                  :itemListElement
+                  :item_list_element
 
     validates :itemListOrder,     type: String,   allow_nil: true
     validates :numberOfItems,     type: Integer,  allow_nil: true
-    validates :itemListElement,   type: Array,    presence: true
+    validates :item_list_element,   type: Array,    presence: true
 
 
     def _to_json_struct
@@ -20,12 +20,12 @@ module SchemaDotOrg
           'numberOfItems' => numberOfItems,
           'url' => url,
           'image' => image,
-          'itemListElement' => itemListElement.map(&:to_json_struct)
+          'itemListElement' => item_list_element.map(&:to_json_struct)
       })
     end
 
-    def itemListElement
-      @itemListElement || []
+    def item_list_element
+      @item_list_element || []
     end
   end
 end

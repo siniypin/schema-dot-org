@@ -2,9 +2,8 @@
 
 require 'schema_dot_org'
 
-
 module SchemaDotOrg
-  class Organization < Thing
+  class LocalBusiness < Organization
 
   end
 end

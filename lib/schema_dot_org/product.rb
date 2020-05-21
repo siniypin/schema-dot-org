@@ -2,36 +2,31 @@
 
 require 'date'
 require 'schema_dot_org'
-require 'schema_dot_org/aggregate_offer'
 
-# Model the Schema.org `Thing > Place`.  See https://schema.org/Product
+# Model the Schema.org `Thing > Product`.  See https://schema.org/Product
 #
 module SchemaDotOrg
-  class Product < SchemaType
-    attr_accessor :name,
-                  :url,
-                  :description,
-                  :image,
-                  :offers
+  class Product < Thing
+    attr_accessor :aggregate_rating,
+                  :offers,
+                  :brand,
+                  :review,
+                  :additional_property
 
-    validates :name,              type: String
-    validates :url,               type: String
-    validates :description,       type: String, allow_nil: true
-    validates :image,             type: Array, allow_nil: true
-    validates :offers,            type: SchemaDotOrg::AggregateOffer
+    validates :offers,                      type: SchemaDotOrg::AggregateOffer, allow_nil: true
+    validates :aggregate_rating,            type: SchemaDotOrg::AggregateRating, allow_nil: true
+    validates :brand,                       type: SchemaDotOrg::Thing, allow_nil: true
+    validates :review,                      type: Array, allow_nil: true
+    validates :additional_property,         type: Array, allow_nil: true
 
     def _to_json_struct
-      {
-          "name" => name,
-          "url" => url,
-          "description" => description,
-          "image" => image,
-          "offers" => offers.to_json_struct
-      }
-    end
-
-    def image
-      @image || []
+      super.merge({
+          "aggregateRating" => aggregate_rating&.to_json_struct,
+          "offers" => offers&.to_json_struct,
+          "brand" => brand&.to_json_struct,
+          "review" => review&.map(&:to_json_struct),
+          "additionalProperty" => additional_property&.map(&:to_json_struct)
+      })
     end
   end
 end
