@@ -22,6 +22,7 @@ require 'schema_dot_org/offer'
 require 'schema_dot_org/web_page'
 require 'schema_dot_org/search_results_page'
 require 'schema_dot_org/product'
+require 'schema_dot_org/product_model'
 
 module SchemaDotOrg
 end
