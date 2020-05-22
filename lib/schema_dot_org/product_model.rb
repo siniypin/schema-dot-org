@@ -12,7 +12,7 @@ module SchemaDotOrg
 
     def _to_json_struct
       super.merge({
-                      "isVariantOf" => is_variant_of
+                      "isVariantOf" => is_variant_of&.to_json_struct
                   })
     end
   end
