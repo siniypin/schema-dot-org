@@ -2,7 +2,7 @@
 
 require 'schema_dot_org'
 
-# Model the Schema.org `Thing > CreativeWork`.  See https://schema.org/Offer
+# Model the Schema.org `Thing > CreativeWork`.  See https://schema.org/WebPage
 #
 module SchemaDotOrg
   class WebPage < CreativeWork

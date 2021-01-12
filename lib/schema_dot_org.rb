@@ -20,9 +20,12 @@ require 'schema_dot_org/property_value'
 require 'schema_dot_org/review'
 require 'schema_dot_org/offer'
 require 'schema_dot_org/web_page'
+require 'schema_dot_org/faq_page'
 require 'schema_dot_org/search_results_page'
 require 'schema_dot_org/product'
 require 'schema_dot_org/product_model'
+require 'schema_dot_org/question'
+require 'schema_dot_org/answer'
 
 module SchemaDotOrg
 end
