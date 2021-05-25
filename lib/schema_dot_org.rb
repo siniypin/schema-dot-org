@@ -2,6 +2,8 @@
 require 'schema_dot_org/schema'
 require 'schema_dot_org/schema_type'
 require 'schema_dot_org/thing'
+require 'schema_dot_org/property_value_specification'
+require 'schema_dot_org/entry_point'
 require 'schema_dot_org/search_action'
 require 'schema_dot_org/web_site'
 require 'schema_dot_org/organization'
