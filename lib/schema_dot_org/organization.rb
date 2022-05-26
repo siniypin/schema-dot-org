@@ -6,11 +6,15 @@ require 'schema_dot_org'
 #
 module SchemaDotOrg
   class Organization < Thing
-    attr_accessor :logo
+    attr_accessor :logo,
+                  :aggregate_rating
+
+    validates :aggregate_rating, type: SchemaDotOrg::AggregateRating, allow_nil: true
 
     def _to_json_struct
       output_logo = self.logo.is_a?(String) ? self.logo : self.logo&.to_json_struct
       super.merge({
+                    "aggregateRating" => aggregate_rating&.to_json_struct,
                     "logo" => output_logo
                   })
     end
