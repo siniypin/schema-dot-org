@@ -3,6 +3,6 @@
 require 'schema_dot_org'
 
 module SchemaDotOrg
-  class LocalBusiness < Organization
+  class Brand < Thing
   end
 end

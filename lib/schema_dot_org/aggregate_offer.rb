@@ -16,14 +16,14 @@ module SchemaDotOrg
     validates :low_price,       type: Numeric, allow_nil: true
     validates :high_price,      type: Numeric, allow_nil: true
     validates :offer_count,     type: Integer, allow_nil: true
-    validates :offers,         type: Array, allow_nil: true
+    validates :offers,          type: Array, allow_nil: true
 
     def _to_json_struct
       super.merge({
-          "lowPrice" => low_price,
-          "highPrice" => high_price,
-          "offerCount" => offer_count,
-          "offers" => offers&.map(&:to_json_struct)
+                    'lowPrice' => low_price,
+                    'highPrice' => high_price,
+                    'offerCount' => offer_count,
+                    'offers' => offers&.map(&:to_json_struct)
       })
     end
 

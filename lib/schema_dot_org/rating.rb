@@ -14,9 +14,9 @@ module SchemaDotOrg
 
     def _to_json_struct
       super.merge({
-                      "ratingValue" => rating_value,
-                      "bestRating" => best_rating,
-                      "worstRating" => worst_rating
+                    'ratingValue' => rating_value,
+                    'bestRating' => best_rating,
+                    'worstRating' => worst_rating
                   })
     end
 
