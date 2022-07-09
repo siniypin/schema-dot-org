@@ -8,13 +8,13 @@ module SchemaDotOrg
   class AggregateRating < Rating
     attr_accessor :review_count, :rating_count
 
-    validates :review_count,            type: Integer
+    validates :review_count,            type: Integer, allow_nil: true
     validates :rating_count,            type: Integer
 
     def _to_json_struct
       super.merge({
-                      "reviewCount" => review_count,
-                      "ratingCount" => rating_count
+                    'reviewCount' => review_count,
+                    'ratingCount' => rating_count
                   })
     end
 
