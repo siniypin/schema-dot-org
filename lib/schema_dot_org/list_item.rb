@@ -9,9 +9,9 @@ module SchemaDotOrg
   class ListItem < Thing
     attr_accessor :position, :item
 
-    validates :position,      type: Integer, presence: true
-
-    validates :item,         type: Thing, allow_nil: true
+    # validates :position,      type: Integer, presence: true
+    #
+    # validates :item,         type: Thing, allow_nil: true
 
     def _to_json_struct
       super.merge({

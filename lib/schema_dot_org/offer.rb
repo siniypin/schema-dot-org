@@ -16,15 +16,15 @@ module SchemaDotOrg
                   :shipping_details,
                   :inventory_level
 
-    validates :price_currency,        type: String
-    validates :price,                 type: Numeric, allow_nil: true
-    validates :availability,          type: String, allow_nil: true, inclusion: Availability.values
-    validates :seller,                type: Organization, allow_nil: true
-    validates :gtin,                  type: String, allow_nil: true
-    validates :sku,                   type: String, allow_nil: true
-    validates :category,              type: String, allow_blank: true
-    validates :shipping_details,      type: OfferShippingDetails, allow_nil: true
-    validates :inventory_level,       type: QuantitativeValue, allow_nil: true
+    # validates :price_currency,        type: String
+    # validates :price,                 type: Numeric, allow_nil: true
+    # validates :availability,          type: String, allow_nil: true, inclusion: Availability.values
+    # validates :seller,                type: Organization, allow_nil: true
+    # validates :gtin,                  type: String, allow_nil: true
+    # validates :sku,                   type: String, allow_nil: true
+    # validates :category,              type: String, allow_blank: true
+    # validates :shipping_details,      type: OfferShippingDetails, allow_nil: true
+    # validates :inventory_level,       type: QuantitativeValue, allow_nil: true
 
     def _to_json_struct
       super.merge({

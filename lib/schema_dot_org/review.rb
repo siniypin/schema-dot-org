@@ -9,7 +9,7 @@ module SchemaDotOrg
   class Review < CreativeWork
     attr_accessor :review_rating
 
-    validates :review_rating,       type: SchemaDotOrg::Rating
+    # validates :review_rating,       type: SchemaDotOrg::Rating
 
     def _to_json_struct
       super.merge({

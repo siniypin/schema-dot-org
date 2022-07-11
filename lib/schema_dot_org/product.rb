@@ -22,20 +22,20 @@ module SchemaDotOrg
                   :size,
                   :keywords
 
-    validates :category,                    type: String, allow_nil: true
-    validates :color,                       type: String, allow_nil: true
-    validates :material,                    type: String, allow_nil: true
-    validates :productID,                   type: String, allow_nil: false
-    validates :gtin,                        type: String, allow_nil: true
-    validates :sku,                         type: String, allow_nil: true
-    validates :height,                      type: QuantitativeValue, allow_nil: true
-    validates :width,                       type: QuantitativeValue, allow_nil: true
-    validates :depth,                       type: QuantitativeValue, allow_nil: true
-    validates :size,                        type: SizeSpecification, allow_nil: true
-    validates :keywords,                    type: String, allow_nil: true
-    validates :offers,                      type: Offer, allow_nil: true
-    validates :aggregate_rating,            type: AggregateRating, allow_nil: true
-    validates :brand,                       type: Brand, allow_nil: true
+    # validates :category,                    type: String, allow_nil: true
+    # validates :color,                       type: String, allow_nil: true
+    # validates :material,                    type: String, allow_nil: true
+    # validates :productID,                   type: String, allow_nil: false
+    # validates :gtin,                        type: String, allow_nil: true
+    # validates :sku,                         type: String, allow_nil: true
+    # validates :height,                      type: QuantitativeValue, allow_nil: true
+    # validates :width,                       type: QuantitativeValue, allow_nil: true
+    # validates :depth,                       type: QuantitativeValue, allow_nil: true
+    # validates :size,                        type: SizeSpecification, allow_nil: true
+    # validates :keywords,                    type: String, allow_nil: true
+    # validates :offers,                      type: Offer, allow_nil: true
+    # validates :aggregate_rating,            type: AggregateRating, allow_nil: true
+    # validates :brand,                       type: Brand, allow_nil: true
 
     def _to_json_struct
       super.merge({

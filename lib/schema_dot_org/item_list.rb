@@ -9,9 +9,9 @@ module SchemaDotOrg
                   :numberOfItems,
                   :item_list_element
 
-    validates :itemListOrder,     type: String,   allow_nil: true
-    validates :numberOfItems,     type: Integer,  allow_nil: true
-    validates :item_list_element,   type: Array,    presence: true
+    # validates :itemListOrder,     type: String,   allow_nil: true
+    # validates :numberOfItems,     type: Integer,  allow_nil: true
+    # validates :item_list_element,   type: Array,    presence: true
 
 
     def _to_json_struct

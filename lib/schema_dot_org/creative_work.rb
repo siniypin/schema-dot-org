@@ -9,10 +9,10 @@ module SchemaDotOrg
   class CreativeWork < Thing
     attr_accessor :date_published, :author, :publisher, :offers, :headline
 
-    validates :date_published,         type: Date, allow_nil: true
-    validates :author,                 type: Thing, allow_nil: true
-    validates :publisher,                 type: Thing, allow_nil: true
-    validates :offers,                      type: Array, allow_nil: true
+    # validates :date_published,         type: Date, allow_nil: true
+    # validates :author,                 type: Thing, allow_nil: true
+    # validates :publisher,                 type: Thing, allow_nil: true
+    # validates :offers,                      type: Array, allow_nil: true
 
     def _to_json_struct
       super.merge({

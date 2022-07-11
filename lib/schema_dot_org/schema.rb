@@ -1,11 +1,10 @@
 require 'json'
-require 'validated_object'
 
 #
 # Base class for schema types. Refactors out common code.
 #
 module SchemaDotOrg
-  class Schema < ValidatedObject::Base
+  class Schema
     ROOT_ATTR = {"@context" => "http://schema.org"}.freeze
 
     def initialize(node)

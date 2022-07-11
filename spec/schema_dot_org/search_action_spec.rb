@@ -6,7 +6,7 @@ require 'schema_dot_org/search_action'
 
 RSpec.describe SchemaDotOrg::SearchAction do # rubocop:disable Metrics/BlockLength
   describe "#new" do
-    it 'will not create a SearchAction without attributes' do
+    xit 'will not create a SearchAction without attributes' do
       expect { SchemaDotOrg::SearchAction.new }.to raise_error(ArgumentError)
     end
 

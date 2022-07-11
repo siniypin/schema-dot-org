@@ -6,7 +6,7 @@ module SchemaDotOrg
   class PropertyValueSpecification < Thing
     attr_accessor :valueName
 
-    validates :valueName, type: String, presence: true
+    # validates :valueName, type: String, presence: true
 
     def _to_json_struct
       super.merge({

@@ -6,7 +6,7 @@ module SchemaDotOrg
   class DefinedRegion < Thing
     attr_accessor :address_country
 
-    validates :address_country, type: String, allow_blank: false
+    # validates :address_country, type: String, allow_blank: false
 
     def _to_json_struct
       super.merge({

@@ -9,7 +9,7 @@ module SchemaDotOrg
   class PropertyValue < StructuredValue
     attr_accessor :value
 
-    validates :value,                 type: String, allow_nil: true
+    # validates :value,                 type: String, allow_nil: true
 
     def _to_json_struct
       super.merge({

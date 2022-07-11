@@ -8,7 +8,7 @@ module SchemaDotOrg
   class ProductModel < Product
     attr_accessor :is_variant_of
 
-    validates :is_variant_of,                 type: SchemaDotOrg::ProductModel, allow_nil: true
+    # validates :is_variant_of,                 type: SchemaDotOrg::ProductModel, allow_nil: true
 
     def _to_json_struct
       super.merge({

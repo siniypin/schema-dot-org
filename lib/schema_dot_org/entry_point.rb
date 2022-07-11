@@ -6,7 +6,7 @@ module SchemaDotOrg
   class EntryPoint < Thing
     attr_accessor :urlTemplate
 
-    validates :urlTemplate, type: String, presence: true
+    # validates :urlTemplate, type: String, presence: true
 
     def _to_json_struct
       super.merge({
